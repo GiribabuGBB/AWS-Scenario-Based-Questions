@@ -5,18 +5,15 @@ Her is the URl .
 
 	1. You have been assigned to design a VPC architecture for a 2-tier application  . The application needs to be highly available and scalable .
 	How would you design the VPC architecture ?
-	
 	Answer:
 	In this scenario , I would design a VPC architecture in the following way .
-	I would create 2 subnets :public and private . The public subnet would contain the load balancers and be accessible from the internet . The private subnet would host the application servers .
-	I would distribute the  subnets across multiple Availability zones for High availability Zones for high availability . Additionally , I would configure auto scaling groups for the application servers .
- Your organization has a VPC with multiple subnets . You want to restrict a outbound internet access for resources in one subnet , but allow outbound internet access for resources in another subnet . How would you achieve this ?
-
-Answer:
-
-To restrict outbound internet access for resources in one subnet , we can modify the route table associated with that the subnet . In the route table , we can remove the default route (0.0.0.0/0) that points to an internet gate way .
-This would prevent resources in that subnet from accessing the internet . For the subnet where outbound internet access is required , we can keep the default route pointing to the internet gateway.
-
+	I would create 2 subnets :public and private . The public subnet would contain the load balancers and be accessible from the internet . The private subnet 	would host the application servers .
+	I would distribute the  subnets across multiple Availability zones for High availability Zones for high availability . Additionally , I would configure 	auto scaling groups for the application servers .
+	  2.Your organization has a VPC with multiple subnets . You want to restrict a outbound internet access for resources in one subnet , but allow outbound 		internet access for resources in another subnet . How would you achieve this ?
+	Answer:
+	To restrict outbound internet access for resources in one subnet , we can modify the route table associated with that the subnet . In the route table , we 	can remove the default route (0.0.0.0/0) that points to an internet gate way .
+	This would prevent resources in that subnet from accessing the internet . For the subnet where outbound internet access is required , we can keep the 		default route pointing to the internet gateway.
+ 
 	3. You Have a VPC with a public subnet and a private subnet . Instances in the private subnet need to access the internet for software updates . How would you allow internet access for instances in the private subnets ?
 	Answer:
 	 To allow internet access for instances in the private subnet , we can use the Internet Gateway or a NAT instance  .
